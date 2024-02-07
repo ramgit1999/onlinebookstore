@@ -14,7 +14,7 @@ pipeline{
         stage("deploy tomcat"){
             steps{
                 sshagent(['project-dev'])
-                sh "ssh -o StrictHostKeyChecking=no target/onlinebookstore-0.0.1-SNAPSHOT.war ubuntu@13.233.124.148:/opt/tomcat/wabapps"
+                sh "scp -o StrictHostKeyChecking=no target/onlinebookstore-0.0.1-SNAPSHOT.war ubuntu@13.233.124.148:/opt/tomcat/wabapps"
             }
         }
     }
