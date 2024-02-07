@@ -1,17 +1,15 @@
-pipleline{
+pipeline{
     agent any
-    stages {
-        stage ("Build"){
-        steps
-          {
-            sh "mvn clean install"
-          }
+    stages{
+        stage("build code"){
+            steps{
+                sh "mvn clean install"
+            }
         }
-        stage ("test"){
-        steps
-          {
-            sh "mvn test"
-          }
+         stage("test code"){
+            steps{
+                sh "mvn test"
+            }
         }
-     }
-  }
+    }
+}
