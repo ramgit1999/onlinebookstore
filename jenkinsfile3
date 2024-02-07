@@ -4,12 +4,12 @@ pipleline{
         stage ("Build"){
         steps
           [
-            sh "maven clean install"
+            sh "mvn clean install"
         ]
         stage ("test"){
         steps
           [
-            sh "maven test"
+            sh "mvn test"
         ]
         }
      }
