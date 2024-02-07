@@ -1,0 +1,18 @@
+pipleline{
+    agent any
+    stages {
+        stage ("Build"){
+        steps
+          [
+            sh "maven clean install"
+        ]
+        stage ("test"){
+        steps
+          [
+            sh "maven test"
+        ]
+        }
+        
+    }
+}
+}
