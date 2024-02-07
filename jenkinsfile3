@@ -12,7 +12,6 @@ pipleline{
             sh "maven test"
         ]
         }
-        
-    }
-}
+     }
+  }
 }
